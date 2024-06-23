@@ -11,5 +11,3 @@ If your system has a dictionary file, such as `/usr/share/dict/words`,
 you may generate a large list of `@p` substrings by running:
 
     bin/names < /usr/share/dict/words
-
-Fuzzy matches coming soon.
