@@ -1,8 +1,8 @@
 .POSIX:
 
 CC = c99
-cppflags = -D_POSIX_C_SOURCE
-cflags = -g -Wall -Wextra -Werror
+cppflags = -D_POSIX_C_SOURCE=200809L
+cflags = -Wall -Wextra -Werror
 all_cflags = $(cppflags) $(CPPFLAGS) $(cflags) $(CFLAGS)
 
 .PHONY: all clean

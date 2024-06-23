@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int valid_word(const char *line);
+int best_score(const char *line);
 
 int main(int argc, char **argv) {
     if (argc > 1) {
         for (int i = 1; i < argc; i++) {
             const char *word = argv[i];
-            if (valid_word(word))
+            if (best_score(word) == 0)
                 printf("%s\n", word);
         }
         return 0;
@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
         if (skip)
             continue;
         skip = 0;
-        if (valid_word(line))
+        if (best_score(line) == 0)
             printf("%s", line);
     }
     return 0;
