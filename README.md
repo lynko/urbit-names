@@ -7,7 +7,7 @@ string whose letters form a substring of some legitimate `@p`).
 no arguments are provided, read them from standard input.
 * `bin/test`: Run a test suite.
 
-`make` also produces `patp.txt`, which contains every word from your
+`make` also produces [patp.txt], which contains every word from your
 `/usr/share/dict/words` that's a `@p` substring. The provided `patp.txt`
 is based on the dictionary from my own machine. To rebuild this file
 from your own dictionary, run `rm patp.txt` and then `make patp.txt`.
