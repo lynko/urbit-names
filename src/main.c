@@ -17,11 +17,10 @@ int main(int argc, char **argv) {
     int skip = 0;
     while (fgets(line, sizeof(line), stdin)) {
         // Lines longer than 64 characters will be skipped.
-        if (strchr(line, 0)[-1] != '\n')
-            skip = 1;
-        if (skip)
+        int prev_skip = skip;
+        skip = strchr(line, 0)[-1] != '\n';
+        if (skip || prev_skip)
             continue;
-        skip = 0;
         if (best_score(line) == 0)
             printf("%s", line);
     }

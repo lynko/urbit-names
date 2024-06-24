@@ -7,7 +7,15 @@ string whose letters form a substring of some legitimate `@p`).
 no arguments are provided, read them from standard input.
 * `bin/test`: Run a test suite.
 
-If your system has a dictionary file, such as `/usr/share/dict/words`,
-you may generate a large list of `@p` substrings by running:
+`make` also produces `patp.txt`, which contains every word from your
+`/usr/share/dict/words` that's a `@p` substring. The provided `patp.txt`
+is based on the dictionary from my own machine. To rebuild this file
+from your own dictionary, run `rm patp.txt` and then `make patp.txt`.
 
-    bin/names < /usr/share/dict/words
+Lines longer than 64 characters will be ignored when reading from the
+standard input. Non-ASCII characters, including Unicode characters, are
+excluded from the matching procedure, which may result in false
+positives for words such as *épée*.
+
+Inexact matching is coming soon (e.g. `~midnyt` is a reasonable match
+for *midnight*).
