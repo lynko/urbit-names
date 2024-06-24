@@ -144,7 +144,6 @@ char *valid_syllable(char *text, char *word, char *end,
 
 
 int best_score(char *line) {
-    // Lines containing non-ASCII bytes will be rejected.
     char word[strlen(line) + 1];
     for (char *r = line, *w = word;; r++) {
         if (isalpha(*r) || *r == 0)
