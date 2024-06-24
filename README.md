@@ -13,6 +13,8 @@ your `/usr/share/dict/words` that's a `@p` substring. The provided
 this file from your own dictionary, run `rm patp.txt` and then
 `make patp.txt`.
 
+[patp]: patp.txt
+
 Lines longer than 64 characters will be ignored when reading from the
 standard input. Non-ASCII characters, including Unicode characters, are
 excluded from the matching procedure, which may result in false
